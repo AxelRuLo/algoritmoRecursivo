@@ -87,8 +87,8 @@ def git():
    
             if(letraAnalizar=="t"):
                 # print("PASO EL GIT")   
-                return "PASO EL GIT"
-    return "NO PASO EL GIT"
+                return True
+    return False
 
 def add():
     if(comprobarSiguiten()==False):
