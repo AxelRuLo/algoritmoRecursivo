@@ -1,8 +1,8 @@
+import PyQt5
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import QtGui
 from models.algoritmoRecursivo import AlgoritmoRecursivo
 from views.Ui_home_view import Ui_MainWindow
-from PyQt5.QtCore import Qt
 
 class HomeController(QMainWindow):
     def __init__(self):
@@ -12,7 +12,7 @@ class HomeController(QMainWindow):
        
         self.setWindowTitle('MINGW64:/')
         self.setWindowOpacity(0.95)
-
+        self.setWindowIcon(QtGui.QIcon("./Resources/icon-git-bash.jpg")) 
         self.resize(800, 330)
         self.setMaximumSize(800, 330)
         self.setMinimumSize(800, 330)
