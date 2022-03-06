@@ -1,16 +1,26 @@
 from PyQt5.QtWidgets import QMainWindow
+from PyQt5 import QtGui
 from models.algoritmoRecursivo import AlgoritmoRecursivo
 from views.Ui_home_view import Ui_MainWindow
-
+from PyQt5.QtCore import Qt
 
 class HomeController(QMainWindow):
     def __init__(self):
         super(HomeController, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+       
+        self.setWindowTitle('MINGW64:/')
+        self.setWindowOpacity(0.95)
+
+        self.resize(800, 330)
+        self.setMaximumSize(800, 330)
+        self.setMinimumSize(800, 330)
+
         self.ui.label_invalido.setVisible(False)
         self.ui.label_valido.setVisible(False)
         self.ui.pushButton_verificar.clicked.connect(self.validarComando)
+
 
 
     def validarComando(self):

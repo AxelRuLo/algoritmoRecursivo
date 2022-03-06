@@ -14,37 +14,59 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(552, 527)
+        MainWindow.resize(842, 334)
+        MainWindow.setStyleSheet("#centralwidget{\n"
+"background-color: rgb(0, 0, 0);\n"
+"}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit_texto = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_texto.setGeometry(QtCore.QRect(130, 100, 291, 51))
+        self.lineEdit_texto.setGeometry(QtCore.QRect(50, 50, 771, 271))
         self.lineEdit_texto.setStyleSheet("border-radius: 10px;\n"
+"background-color: rgb(0, 0, 0);\n"
 "border: 1px solid;\n"
-"border-color: rgb(0, 0, 0);")
-        self.lineEdit_texto.setAlignment(QtCore.Qt.AlignCenter)
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(191, 191, 191);")
+        self.lineEdit_texto.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.lineEdit_texto.setObjectName("lineEdit_texto")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(230, 40, 91, 21))
-        self.label.setStyleSheet("font: 75 10pt \"Tahoma\";")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
         self.pushButton_verificar = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_verificar.setGeometry(QtCore.QRect(230, 210, 101, 41))
-        self.pushButton_verificar.setStyleSheet("")
+        self.pushButton_verificar.setGeometry(QtCore.QRect(670, 270, 101, 41))
+        self.pushButton_verificar.setStyleSheet("background-color: rgb(30, 30, 30);\n"
+"color: rgb(191, 191, 191);")
         self.pushButton_verificar.setObjectName("pushButton_verificar")
         self.label_valido = QtWidgets.QLabel(self.centralwidget)
-        self.label_valido.setGeometry(QtCore.QRect(240, 330, 81, 16))
+        self.label_valido.setGeometry(QtCore.QRect(360, 290, 81, 16))
         self.label_valido.setStyleSheet("color: rgb(0, 170, 0);\n"
 "font: 81 10pt \"Rockwell Extra Bold\";")
         self.label_valido.setAlignment(QtCore.Qt.AlignCenter)
         self.label_valido.setObjectName("label_valido")
         self.label_invalido = QtWidgets.QLabel(self.centralwidget)
-        self.label_invalido.setGeometry(QtCore.QRect(220, 330, 131, 16))
+        self.label_invalido.setGeometry(QtCore.QRect(340, 290, 131, 16))
         self.label_invalido.setStyleSheet("color: rgb(255, 0, 0);\n"
 "font: 81 10pt \"Rockwell Extra Bold\";")
         self.label_invalido.setAlignment(QtCore.Qt.AlignCenter)
         self.label_invalido.setObjectName("label_invalido")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(30, 20, 151, 16))
+        self.label.setStyleSheet("color: rgb(0, 107, 0);")
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(180, 20, 81, 16))
+        self.label_2.setStyleSheet("color: rgb(136, 0, 136);")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(250, 20, 21, 16))
+        self.label_3.setStyleSheet("color: rgb(191, 191, 0);")
+        self.label_3.setObjectName("label_3")
+        self.lineEdit_texto_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_texto_2.setGeometry(QtCore.QRect(30, 50, 16, 211))
+        self.lineEdit_texto_2.setStyleSheet("border-radius: 10px;\n"
+"background-color: rgb(0, 0, 0);\n"
+"border: 1px solid;\n"
+"border-color: rgb(0, 0, 0);\n"
+"color: rgb(191, 191, 191);")
+        self.lineEdit_texto_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
+        self.lineEdit_texto_2.setObjectName("lineEdit_texto_2")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -53,7 +75,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "GIT ADD"))
         self.pushButton_verificar.setText(_translate("MainWindow", "VERIFICAR"))
         self.label_valido.setText(_translate("MainWindow", "VÁLIDO"))
         self.label_invalido.setText(_translate("MainWindow", "INVÁLIDO"))
+        self.label.setText(_translate("MainWindow", "user@LAPTOP-L87OBJ59"))
+        self.label_2.setText(_translate("MainWindow", " MINGW64"))
+        self.label_3.setText(_translate("MainWindow", "/"))
+        self.lineEdit_texto_2.setText(_translate("MainWindow", "$"))
