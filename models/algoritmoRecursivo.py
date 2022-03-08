@@ -56,14 +56,22 @@ class AlgoritmoRecursivo:
         return True
 
     def letrasMinusculas(self):
+
         if(self.comprobarSiguiten()==False):
-            # # # print("YA NO HAY MAS A ANALIZAR")
             return False
         letraAanalizar = self.listaAnalizar.pop()
+        if(letraAanalizar == "."):
+            self.listaAnalizar.append(letraAanalizar)
+            self.listaAnalizar.append(".")
+            return False
+
+        
+        print(letraAanalizar)
         if(string.ascii_lowercase.__contains__(letraAanalizar)):
             print( "PASO LM CON MINUSCULA")
             return True
         print( "NO PASO LM")
+        self.listaAnalizar.append(letraAanalizar)
         return False
 
     def RletrasMinusculas(self):
@@ -109,8 +117,8 @@ class AlgoritmoRecursivo:
                     return False
                 letraAnalizar = self.listaAnalizar.pop()
                 if(letraAnalizar=="d"):  
-                    return "PASO EL add"
-        return "NO PASO EL add"
+                    return True
+        return False
 
 
     def produccion(self):
@@ -150,7 +158,14 @@ class AlgoritmoRecursivo:
         if(bandera == False):
             print(self.listaAnalizar)
             return "no paso"
-        # print(listaAnalizar)
+        
+        print(self.listaAnalizar)
+        print(len(self.listaAnalizar))
+
+        if(len(self.listaAnalizar) > 0):
+            return "no paso"
+        else:
+            return True
 
 
     def comprobarSiguiten(self):

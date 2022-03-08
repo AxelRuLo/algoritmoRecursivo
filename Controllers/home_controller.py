@@ -33,7 +33,7 @@ class HomeController(QMainWindow):
         evaluarCadena = algoritmoRecursivo.produccion()
         print(evaluarCadena)
 
-        if(evaluarCadena == "no paso" or (not texto.__contains__('add'))):
+        if(evaluarCadena == "no paso"):
             self.ui.label_valido.setVisible(False)
             self.ui.label_invalido.setVisible(True)
         else:
